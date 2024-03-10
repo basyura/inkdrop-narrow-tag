@@ -1,10 +1,10 @@
 {
-  "name": "switch-tag",
-  "main": "./lib/switch-tag",
+  "name": "narrow-tag",
+  "main": "./lib/plugin",
   "version": "0.1.0",
-  "description": "Quickly switch between tags",
+  "description": "Quickly narrow down tags",
   "keywords": [],
-  "repository": "https://github.com/basyura/inkdrop-switch-tag",
+  "repository": "https://github.com/basyura/inkdrop-narrow-tag",
   "license": "MIT",
   "engines": {
     "inkdrop": "^5.x"

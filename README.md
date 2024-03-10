@@ -1,20 +1,20 @@
-# switch-tag
+# narrow-tag
 
-Inkdrop's plugin to switch by tag.
+Inkdrop's plugin to narrow by tag.
 
-![Screenshot](https://raw.githubusercontent.com/basyura/inkdrop-switch-tag/master/images/image.png)
+![Screenshot](https://raw.githubusercontent.com/basyura/inkdrop-narrow-tag/master/images/image.png)
 
 ## Install
 
 ```
-ipm install switch-tag
+ipm install narrow-tag
 ```
 
 ## Keybindings
 
 | Command         | Explanation       |
 | --------------- | ------------------|
-| switch-tag:open | open tag selector |
+| narrow-tag:open | open tag selector |
 
 
 ## LICENSE
