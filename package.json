@@ -4,7 +4,7 @@
   "version": "0.4.5",
   "description": "Quickly narrow down tags",
   "keywords": [],
-  "repository": "https://github.com/basyura/inkdrop-narrow-tag",
+  "repository": "git@github.com:basyura/inkdrop-narrow-tag.git",
   "license": "MIT",
   "engines": {
     "inkdrop": "^5.x"
