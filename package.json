@@ -1,7 +1,7 @@
 {
   "name": "narrow-tag",
   "main": "./lib/plugin",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Quickly narrow down tags",
   "keywords": [],
   "repository": "https://github.com/basyura/inkdrop-narrow-tag",
