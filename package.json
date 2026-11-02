@@ -3,10 +3,27 @@
   "main": "./lib/plugin",
   "version": "0.4.8",
   "description": "Quickly narrow down tags",
+  "scripts": {
+    "test": "jest --runInBand"
+  },
   "keywords": [],
   "repository": "git@github.com:basyura/inkdrop-narrow-tag.git",
   "license": "MIT",
   "engines": {
     "inkdrop": "^6.x"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
+    "@babel/preset-react": "^7.29.7",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.8",
+    "babel-jest": "^30.5.2",
+    "jest": "^30.5.2",
+    "jest-environment-jsdom": "^30.5.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   }
 }
