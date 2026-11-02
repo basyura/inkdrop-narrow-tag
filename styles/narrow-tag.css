@@ -1,0 +1,46 @@
+.narrow-tag-dialog {
+  margin-top: 80px !important;
+  align-self: flex-start;
+  background: none !important;
+}
+
+.narrow-tag-dropdown {
+  width: 300px;
+}
+
+.narrow-tag-input {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  background: var(--input-background);
+  color: inherit;
+}
+
+.narrow-tag-menu {
+  margin-top: 0.5rem;
+  max-height: var(--narrow-tag-menu-height) !important;
+  overflow-y: auto;
+  border-radius: 0.5rem;
+  background: var(--dropdown-menu-background);
+}
+
+.narrow-tag-option {
+  display: block;
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.narrow-tag-option.is-active {
+  background: var(--note-list-view-item-active-background);
+}
+
+.narrow-tag-empty {
+  padding: 0.65rem 0.9rem;
+  color: var(--muted-text-color);
+}

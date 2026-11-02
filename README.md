@@ -2,6 +2,8 @@
 
 Inkdrop's plugin to narrow by tag.
 
+Requires Inkdrop v6.
+
 ![Screenshot](https://raw.githubusercontent.com/basyura/inkdrop-narrow-tag/master/images/image.png)
 
 ## Install

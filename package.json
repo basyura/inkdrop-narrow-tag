@@ -7,9 +7,6 @@
   "repository": "git@github.com:basyura/inkdrop-narrow-tag.git",
   "license": "MIT",
   "engines": {
-    "inkdrop": "^5.x"
-  },
-  "dependencies": {
-    "semantic-ui-react": "0.88.2"
+    "inkdrop": "^6.x"
   }
 }
