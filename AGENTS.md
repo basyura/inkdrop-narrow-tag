@@ -21,6 +21,6 @@
 ## 検証環境
 
 - `npm ci` で開発依存を導入し、`npm test` でテストを実行する。
-- テストは Jest と React Testing Library を使い、Inkdrop の API をモック化した jsdom 環境で実行する。実機確認の代替にはしない。
+- テストは Vitest と React Testing Library を使い、Inkdrop の API をモック化した jsdom 環境で実行する。実機確認の代替にはしない。
 - 隣接リポジトリの依存パッケージや `/private/tmp` の一時スクリプトを、このリポジトリの常設の検証環境として扱わない。
 - 一時的な環境で検証した場合は、使用した環境と検証範囲を報告する。

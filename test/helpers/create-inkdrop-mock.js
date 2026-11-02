@@ -35,24 +35,24 @@ export function createInkdropMock({
 } = {}) {
   const state = { tags: { all: tags } };
   const registeredCommands = {};
-  const dispose = jest.fn(() => {
+  const dispose = vi.fn(() => {
     Object.keys(registeredCommands).forEach((name) => {
       delete registeredCommands[name];
     });
   });
-  const dispatch = jest.fn();
+  const dispatch = vi.fn();
   const inkdrop = {
     components: {
       classes: { Dialog },
-      registerClass: jest.fn(),
-      deleteClass: jest.fn(),
+      registerClass: vi.fn(),
+      deleteClass: vi.fn(),
     },
     layouts: {
-      addComponentToLayout: jest.fn(),
-      removeComponentFromLayout: jest.fn(),
+      addComponentToLayout: vi.fn(),
+      removeComponentFromLayout: vi.fn(),
     },
     commands: {
-      add: jest.fn((element, commands) => {
+      add: vi.fn((element, commands) => {
         Object.assign(registeredCommands, commands);
         return { dispose };
       }),

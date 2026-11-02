@@ -26,10 +26,13 @@ npm ci
 npm test
 ```
 
-Tests use Jest and React Testing Library with mocked Inkdrop APIs in jsdom.
+Tests require Node.js 22.22.2+ (22.x), 24.15+ (24.x), or 26+.
+Tests use Vitest and React Testing Library with mocked Inkdrop APIs in jsdom.
 They cover plugin registration, tag search and selection, keyboard controls,
 focus handling, and filtering command order. They run using this repository's
 development dependencies; a running Inkdrop instance is not required.
+
+Run `npm test -- --coverage` to collect coverage.
 
 jsdom does not verify CSS layout, actual scrolling, or Inkdrop's filtering
 results. Check those in Inkdrop when changing the UI.

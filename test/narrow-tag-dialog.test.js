@@ -1,21 +1,20 @@
 import React from "react";
 import { act, fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import * as inkdropModule from "inkdrop";
 import NarrowTagDialog from "../lib/narrow-tag-dialog";
 import { createInkdropMock } from "./helpers/create-inkdrop-mock";
-
-const inkdropModule = require("inkdrop");
 
 const input = () => screen.getByRole("textbox", { name: "Select Tag" });
 const selectedOption = () => screen.getByRole("option", { selected: true });
 const advanceTime = (milliseconds) => {
-  act(() => jest.advanceTimersByTime(milliseconds));
+  act(() => vi.advanceTimersByTime(milliseconds));
 };
 
 function renderDialog(options) {
   const mock = createInkdropMock(options);
   const view = render(<NarrowTagDialog />);
-  const user = userEvent.setup({ advanceTimers: jest.advanceTimersByTime });
+  const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
   const open = () => {
     act(() => mock.registeredCommands["narrow-tag:open"]());
   };
@@ -224,8 +223,8 @@ describe("タグ確定と絞り込み", () => {
     // 終了時に DOM が残る状態を模擬し、連続した確定イベントを送る。
     const originalUseModal = inkdropModule.useModal;
     let finishClosing;
-    const close = jest.fn();
-    jest.spyOn(inkdropModule, "useModal").mockImplementation(() => {
+    const close = vi.fn();
+    vi.spyOn(inkdropModule, "useModal").mockImplementation(() => {
       const modal = originalUseModal();
       finishClosing = modal.close;
       return { ...modal, close };
@@ -276,7 +275,7 @@ describe("表示処理と終了処理", () => {
   test("アンマウント時にコマンド登録と入力フォーカス用タイマーを解除する", () => {
     const { open, unmount, dispose, registeredCommands, inkdrop } = renderDialog();
     open();
-    const focus = jest.spyOn(input(), "focus");
+    const focus = vi.spyOn(input(), "focus");
     fireEvent.change(input(), { target: { value: "a" } });
     expect(inkdrop.commands.add).toHaveBeenCalledTimes(1);
 
@@ -286,6 +285,6 @@ describe("表示処理と終了処理", () => {
     expect(dispose).toHaveBeenCalledTimes(1);
     expect(registeredCommands["narrow-tag:open"]).toBeUndefined();
     expect(focus).not.toHaveBeenCalled();
-    expect(jest.getTimerCount()).toBe(0);
+    expect(vi.getTimerCount()).toBe(0);
   });
 });
