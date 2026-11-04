@@ -7,7 +7,7 @@
     "test": "vitest run"
   },
   "keywords": [],
-  "repository": "git@github.com:basyura/inkdrop-narrow-tag.git",
+  "repository": "https://github.com/basyura/inkdrop-narrow-tag",
   "license": "MIT",
   "engines": {
     "inkdrop": "^6.x"
